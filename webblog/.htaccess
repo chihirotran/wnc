@@ -1,18 +1,2 @@
-
-RewriteEngine On
-
-RewriteBase /
-
-RewriteCond %{HTTP_HOST} !^www.domain.com$ [NC]
-
-RewriteRule ^(.*)$ http://www.domain.com/$1 [L,R=301]
-
-// Không theme WWW vào URL
-
-RewriteEngine On
-
-RewriteBase /
-
-RewriteCond %{HTTP_HOST} !^domain.com$ [NC]
-
-RewriteRule ^(.*)$ http://domain.com/$1 [L,R=301]
+RewriteEngine on
+RewriteRule ^post/(.*).html$ ./single.php?url=$1
